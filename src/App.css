@@ -1,10 +1,19 @@
 .App {
-  text-align: center;
+  background-color: #282c34;
+  font-family: "Poppins", "Ubuntu", sans-serif;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 60px;
   pointer-events: none;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 0 6vmin;
+  min-height: 10vh;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,19 +22,65 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
+.font--secondary {
+  font-family: "Spectral", serif;
+  font-weight: 800;
+  font-size: 3.375rem;
+  margin: 10px 0;
+}
+
+p {
+  color: #ffffffa6;
+  font-size: 1.25rem;
+}
+
+.text--wrapper {
+  z-index: 1;
+}
+
+main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  padding: 0 6vmin;
 }
 
-.App-link {
-  color: #61dafb;
+section {
+  width: 100%;
+  min-height: 40vh;
+  padding-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 53% auto;
+  padding-top: 0;
+}
+
+.image--wrapper {
+  position: relative;
+  overflow: hidden;
+  margin: 0px auto;
+  max-width: 660px;
+}
+
+.image {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  opacity: 1;
+  transition: none 0s ease 0s;
+}
+
+.section--about-me {
+  align-items: center;
+}
+
+.section--header {
+  font-size: 15px;
+  color: #ffffffa6;
+  text-transform: uppercase;
 }
 
 @keyframes App-logo-spin {

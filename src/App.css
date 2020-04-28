@@ -29,13 +29,26 @@
   margin: 10px 0;
 }
 
-p {
+.body--font {
   color: #ffffffa6;
   font-size: 1.25rem;
 }
 
+.font--caption {
+  color: #ffffffa6;
+  font-size: 0.875rem;
+}
+
 .text--wrapper {
   z-index: 1;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.flex--end {
+  align-self: flex-end;
 }
 
 main {
@@ -50,8 +63,6 @@ section {
   width: 100%;
   min-height: 40vh;
   padding-bottom: 2rem;
-  display: grid;
-  grid-template-columns: 53% auto;
   padding-top: 0;
 }
 
@@ -73,8 +84,11 @@ section {
   transition: none 0s ease 0s;
 }
 
-.section--about-me {
+.section--split {
   align-items: center;
+  grid-template-columns: 53% auto;
+  display: grid;
+  grid-gap: 10px;
 }
 
 .section--header {

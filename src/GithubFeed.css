@@ -1,0 +1,36 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  background: #31343e;
+  border-radius: 5px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  margin: 0 10px;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.timestamp {
+  font-style: italic;
+}
+
+.avatar--wrapper {
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

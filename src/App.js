@@ -12,7 +12,7 @@ function App() {
         <img src={logo} className="App-logo" alt="react symbol" />
       </nav>
       <main>
-        <section className="section--split">
+        <section className="section--split align--center">
           <div className="text--wrapper">
             <h2 className="font--secondary">Hey, I'm ReDi.</h2>
             <p className="body--font">

@@ -21,7 +21,7 @@ export const GithubFeed = () => {
           activity.type === EVENT_TYPE.push ||
           activity.type === EVENT_TYPE.create
       );
-      setActivities(createdActivities);
+      setActivities(createdActivities.splice(0, 6)); // Limit number to most recent 6
     }
     getEvents();
   }, []);

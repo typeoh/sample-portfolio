@@ -1,6 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import { parseTimeStamp } from "./utils/formatters";
 import "./GithubFeed.css";
+
+const EVENT_TYPE = {
+  push: "PushEvent",
+  create: "CreateEvent",
+};
 
 export const GithubFeed = () => {
   const [activities, setActivities] = useState(null);
@@ -12,7 +17,9 @@ export const GithubFeed = () => {
       );
       const data = await response.json();
       const createdActivities = data.filter(
-        (activity) => activity.type === "CreateEvent"
+        (activity) =>
+          activity.type === EVENT_TYPE.push ||
+          activity.type === EVENT_TYPE.create
       );
       setActivities(createdActivities);
     }
@@ -21,19 +28,23 @@ export const GithubFeed = () => {
 
   return activities ? (
     <div className="section--split">
-      {activities.map((activity, index) => (
+      {activities.map(({ actor, payload, created_at, type }, index) => (
         <div className="card" key={index}>
           <div className="avatar--wrapper">
             <img
               className="avatar"
-              src={activity.actor.avatar_url}
+              src={actor.avatar_url}
               alt="Really cool person"
             />
           </div>
           <div className="bio">
-            <p>{activity.payload.description}</p>
+            {type === EVENT_TYPE.create ? (
+              <p> {payload.description}</p>
+            ) : (
+              payload.commits.map((commit) => <p>{commit.message}</p>)
+            )}
             <p className="font--caption timestamp">
-              {parseTimeStamp(activity.created_at)}
+              {parseTimeStamp(created_at)}
             </p>
           </div>
         </div>

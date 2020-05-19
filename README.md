@@ -1,3 +1,15 @@
+## ReDi Portfolio
+
+Hi ReDi React class! This is a sample portfolio that we will be working on to apply some of the skills that we've been learning over the last semester. 
+
+We will be working with some of these designs to create a basic portfolio in light and dark mode. 
+
+![HomePage Dark Mode](https://user-images.githubusercontent.com/28733727/82323968-1c4d4380-99d9-11ea-87b0-77a1b9a4fece.png)
+![HomePage Light Mode](https://user-images.githubusercontent.com/28733727/82323971-1d7e7080-99d9-11ea-9b72-febb9e6e3268.png)
+![HomePage Theme](https://user-images.githubusercontent.com/28733727/82323972-1eaf9d80-99d9-11ea-8eaf-6c9ec042b5ca.png)
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
